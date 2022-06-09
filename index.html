@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta name="description" content="Pagina creada para completar el reto 2 en programación.">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <title>Alura reto 2</title>
+
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body>
+    <header class="header enter__top">
+        <img class="header__logo" src="./assets/images/logo.svg" alt="Alura Logo">
+    </header>
+
+    <main class="main">
+
+        <section class="screen_zero class">
+            <button class="btn btn__dark btn__big enter__left" id="start_game">Iniciar juego</button>
+            <button class="btn btn__light enter__right" id="add_word">Agregar nueva palabra</button>
+        </section>
+
+
+        <section class="screen_one hidden">
+
+            <div class="input__container">
+                <input type="text" placeholder="Ingrese una palabra." class="word__input new_word_input">
+            </div>
+
+            <div class="button__container">
+                <div class="labeled__button">
+                    <div class="info__label">
+                        <img src="./assets/images/info.svg" alt="Logo de información" class="info__logo">
+                        <p class="new_word_error">Min. 3 letras</p>
+                    </div>
+                    <button class="btn btn__dark enter__left" id="save_word">Guardar y empezar</button>
+                </div>
+                <button class="btn btn__light enter__right" id="cancel_add">Cancelar</button>
+            </div>
+        </section>
+
+        <section class="screen_two hidden">
+
+            <div class="drawing">
+                <canvas class="canvas"></canvas>
+            </div>
+            <div class="letters"></div>
+            <div class="failetures"></div>
+
+            <div class="button__container">
+                <button class="btn btn__dark enter__left" id="reset_game">Nuevo juego</button>
+                <button class="btn btn__light enter__right" id="desist_game">Desistir</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./assets/scripts/index.js" type="module"></script>
+</body>
+
+</html>

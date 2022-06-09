@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import url("./animations.css");
+@import url("./alerts.css");
+
+:root {
+  font-size: clamp(12px, 2vw, 16px);
+
+  --dark-blue: #0a3871;
+  --primary-100: #ffffff;
+  --actual-bg: #0a3871;
+  --actual-clr: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: var(--actual-bg);
+  color: var(--actual-clr);
+  font-family: "Inter";
+  border: none;
+  border-radius: 1.5em;
+  padding: 1.5em;
+  cursor: pointer;
+  width: 95vw;
+
+  margin: 1em;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+
+.btn.btn__big {
+  padding: 2em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.header {
+  display: flex;
+  height: 10%;
+  width: 90%;
+  min-width: 250px;
+  min-height: 75px;
+  user-select: none;
+}
+
+.header__logo {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen_zero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn.btn__light {
+  --actual-bg: #ffffff;
+  --actual-clr: #0a3871;
+
+  outline: 1px solid var(--dark-blue);
+}
+
+.btn.btn__dark {
+  --actual-bg: #0a3871;
+  --actual-clr: #ffffff;
+
+  background-color: var(--dark-blue);
+  color: var(--primary-100);
+  outline: 1px solid var(--dark-blue);
+}
+
+.btn:hover {
+  background-color: var(--actual-clr);
+  color: var(--actual-bg);
+  transform: scale(1.05);
+}
+
+/*------------------------ Screen one -------------------------*/
+
+.screen_zero .btn {
+  max-width: 17.5em;
+}
+
+.screen_zero .btn.btn__big {
+  max-width: 20em;
+}
+
+/*------------------------ Screen two -------------------------*/
+
+.input__container {
+  margin: auto;
+  width: 100%;
+  max-width: 750px;
+  min-width: 270px;
+  height: 60vh;
+  min-height: 200px;
+}
+
+.word__input {
+  padding: 2rem;
+  outline: none;
+  border: none;
+  font-size: 2em;
+}
+
+.screen_one {
+  position: absolute;
+  bottom: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.button__container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.screen_one .btn {
+  justify-self: center;
+  max-width: 20.5em;
+}
+
+.info__logo {
+  margin: 0 1em;
+}
+
+.labeled__button {
+  position: relative;
+}
+
+.info__label {
+  position: absolute;
+  top: -1em;
+  padding: 0 1.5em;
+  display: flex;
+}
+
+/*------------------------ Screen three -------------------------*/
+
+.screen_two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.screen_two .btn {
+  justify-self: center;
+  max-width: 20.5em;
+}
+
+.letters {
+  display: flex;
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 3em;
+}
+
+.drawing {
+  height: 80%;
+}
+
+.letter {
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-bottom: 3px solid var(--dark-blue);
+  min-width: 2ch;
+}
+
+.failed {
+  margin-bottom: 1em;
+  font-size: 2em;
+  height: 3ch;
+}
+
+.button__container {
+  margin-top: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .letters {
+    font-size: 1.5em;
+  }
+
+  .failed {
+    margin: 1em;
+    text-align: center;
+    font-size: 1.4em;
+  }
+}
+
+.drawing{
+  position: relative;
+  min-width: 270px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.canvas{
+  width: 100%;
+  height: 100%;
+}
